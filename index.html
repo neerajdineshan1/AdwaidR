@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adwaid Rakhesh | Risk Management & Commerce</title>
+
+    <meta name="description"
+        content="Portfolio of Adwaid Rakhesh - B.Com Risk Management student at Jain University, integrated with CIMA.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================================
+           GENERAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --navy: #0b1f3a;
+            --navy-dark: #071426;
+            --blue: #163b66;
+            --gold: #c9a227;
+            --gold-light: #e2c45c;
+
+            --white: #ffffff;
+            --light: #f5f7fa;
+            --text: #172033;
+            --muted: #687386;
+            --border: #e3e7ed;
+            --card: #ffffff;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 72px;
+
+            z-index: 1000;
+
+            background: rgba(11, 31, 58, 0.96);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .nav-container {
+            height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: white;
+
+            font-size: 22px;
+
+            font-weight: 800;
+
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--gold-light);
+        }
+
+        .nav-links {
+            display: flex;
+
+            list-style: none;
+
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: #d9e0ea;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-light);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        #home {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 72px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--navy-dark),
+                    var(--navy)
+                );
+
+            color: white;
+        }
+
+        .hero-grid {
+            display: grid;
+
+            grid-template-columns: 1.2fr 0.8fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .hero-small {
+            color: var(--gold-light);
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            margin-bottom: 18px;
+
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 7vw, 82px);
+
+            line-height: 1;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 22px;
+        }
+
+        .hero-role {
+            color: #e8edf5;
+
+            font-size: 23px;
+
+            font-weight: 600;
+
+            margin-bottom: 18px;
+        }
+
+        .hero-description {
+            max-width: 680px;
+
+            color: #bfc9d8;
+
+            font-size: 17px;
+
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 12px 21px;
+
+            border-radius: 7px;
+
+            border: 1px solid rgba(255,255,255,0.2);
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+
+            border-color: var(--gold);
+
+            color: white;
+        }
+
+        .btn-outline {
+            color: white;
+
+            background: transparent;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+
+        /* =====================================================
+           PROFILE PHOTO
+        ===================================================== */
+
+        .profile-area {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        .profile-frame {
+            width: 320px;
+            height: 380px;
+
+            padding: 10px;
+
+            background: linear-gradient(
+                145deg,
+                var(--gold-light),
+                var(--gold),
+                #8e7018
+            );
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 25px 60px rgba(0,0,0,0.35);
+        }
+
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: center;
+
+            border-radius: 12px;
+
+            display: block;
+
+            background: #ddd;
+        }
+
+
+        /* =====================================================
+           SECTIONS
+        ===================================================== */
+
+        section {
+            padding: 95px 0;
+        }
+
+        .section-title {
+            color: var(--navy);
+
+            font-size: 36px;
+
+            margin-bottom: 8px;
+        }
+
+        .section-subtitle {
+            color: var(--muted);
+
+            margin-bottom: 40px;
+        }
+
+        .section-heading {
+            margin-bottom: 40px;
+        }
+
+        .section-heading::after {
+            content: "";
+
+            display: block;
+
+            width: 50px;
+            height: 3px;
+
+            margin-top: 15px;
+
+            background: var(--gold);
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns: 1.2fr 0.8fr;
+
+            gap: 55px;
+
+            align-items: start;
+        }
+
+        .about-text {
+            color: var(--muted);
+
+            font-size: 17px;
+
+            line-height: 1.9;
+        }
+
+        .about-info {
+            display: grid;
+
+            gap: 14px;
+        }
+
+        .info-box {
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            padding: 19px;
+
+            border-radius: 9px;
+
+            box-shadow: 0 5px 20px rgba(20,30,50,0.04);
+        }
+
+        .info-box small {
+            color: var(--gold);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+        }
+
+
+        /* =====================================================
+           SKILLS
+        ===================================================== */
+
+        #skills {
+            background: white;
+        }
+
+        .skills {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 11px;
+        }
+
+        .skill {
+            padding: 10px 16px;
+
+            background: #f8f9fb;
+
+            border: 1px solid var(--border);
+
+            border-radius: 6px;
+
+            color: var(--text);
+
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            border-color: var(--gold);
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+
+        /* =====================================================
+           PROJECTS
+        ===================================================== */
+
+        .projects {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 22px;
+        }
+
+        .project {
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            padding: 28px;
+
+            transition: 0.3s;
+
+            box-shadow: 0 5px 20px rgba(20,30,50,0.04);
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+
+            border-color: var(--gold);
+
+            box-shadow: 0 15px 35px rgba(20,30,50,0.09);
+        }
+
+        .project-number {
+            color: var(--gold);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            margin-bottom: 13px;
+
+            letter-spacing: 1px;
+        }
+
+        .project h3 {
+            color: var(--navy);
+
+            font-size: 21px;
+
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            color: var(--muted);
+
+            font-size: 14px;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =====================================================
+           EDUCATION
+        ===================================================== */
+
+        #education {
+            background: white;
+        }
+
+        .timeline {
+            border-left: 2px solid #dfe4eb;
+
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+
+            margin-bottom: 42px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+
+            width: 11px;
+            height: 11px;
+
+            background: var(--gold);
+
+            border: 3px solid white;
+
+            border-radius: 50%;
+
+            left: -37px;
+
+            top: 7px;
+
+            box-shadow: 0 0 0 1px var(--gold);
+        }
+
+        .timeline-item h3 {
+            color: var(--navy);
+
+            font-size: 20px;
+        }
+
+        .timeline-item .date {
+            color: var(--gold);
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            margin: 5px 0 8px;
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+        }
+
+
+        /* =====================================================
+           CERTIFICATIONS
+        ===================================================== */
+
+        .certifications {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 16px;
+        }
+
+        .certificate {
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 9px;
+
+            padding: 21px;
+
+            transition: 0.3s;
+        }
+
+        .certificate:hover {
+            transform: translateY(-3px);
+
+            border-color: var(--gold);
+        }
+
+        .certificate h3 {
+            color: var(--navy);
+
+            font-size: 16px;
+
+            margin-bottom: 6px;
+        }
+
+        .certificate p {
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           LANGUAGES
+        ===================================================== */
+
+        #languages {
+            background: white;
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        #contact {
+            background: var(--navy);
+
+            color: white;
+        }
+
+        .contact-box {
+            text-align: center;
+
+            max-width: 750px;
+
+            margin: auto;
+        }
+
+        .contact-box h2 {
+            font-size: 36px;
+
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            color: #bdc8d7;
+
+            margin-bottom: 28px;
+        }
+
+        .contact-links {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: var(--navy-dark);
+
+            color: #8f9bad;
+
+            text-align: center;
+
+            padding: 25px;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-grid,
+            .about-grid,
+            .projects,
+            .certifications {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-grid {
+                gap: 45px;
+            }
+
+            .profile-area {
+                order: -1;
+            }
+
+            .profile-frame {
+                width: 245px;
+                height: 295px;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+
+                letter-spacing: -3px;
+            }
+
+            .hero-role {
+                font-size: 19px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+    <div class="container nav-container">
+
+        <a href="#home" class="logo">
+            Adwaid<span>.</span>
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#certifications">Certifications</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section id="home">
+
+    <div class="container">
+
+        <div class="hero-grid">
+
+
+            <div class="hero">
+
+                <div class="hero-small">
+                    WELCOME TO MY PORTFOLIO
+                </div>
+
+                <h1>
+                    Adwaid Rakhesh
+                </h1>
+
+                <div class="hero-role">
+                    B.Com Risk Management Student
+                </div>
+
+                <p class="hero-description">
+
+                    I am Adwaid from Kerala, India. Currently pursuing
+                    my B.Com degree in Risk Management, integrated with
+                    CIMA, at Jain University.
+
+                    I like to spend my time learning new things
+                    and exploring a lot.
+
+                </p>
+
+
+                <div class="buttons">
+
+                    <a href="#about"
+                       class="btn btn-primary">
+
+                        Explore Profile
+
+                    </a>
+
+
+                    <a href="resume.pdf"
+                       class="btn btn-outline"
+                       target="_blank">
+
+                        View Resume
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROFILE PHOTO -->
+
+            <div class="profile-area">
+
+                <div class="profile-frame">
+
+                    <img src="profile.jpg"
+                         alt="Adwaid Rakhesh">
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
+            <p class="section-subtitle">
+                A little about me
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <div>
+
+                <p class="about-text">
+
+                    I am Adwaid from Kerala, India. Currently
+                    Pursuing my B.Com degree on Risk Management
+                    (integrated with CIMA) in Jain University.
+
+                    I like to spend my time learning new things
+                    and explore a lot.
+
+                    To secure a dynamic position where I can
+                    combine my creative thinking, communication
+                    skills, and commerce knowledge to contribute
+                    meaningfully and grow professionally.
+
+                </p>
+
+            </div>
+
+
+            <div class="about-info">
+
+
+                <div class="info-box">
+
+                    <small>
+                        Location
+                    </small>
+
+                    <br>
+
+                    Kerala, India
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <small>
+                        Degree
+                    </small>
+
+                    <br>
+
+                    B.Com Risk Management
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <small>
+                        Integrated With
+                    </small>
+
+                    <br>
+
+                    CIMA
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <small>
+                        University
+                    </small>
+
+                    <br>
+
+                    Jain University, Bangalore, India
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2 class="section-title">
+                Skills
+            </h2>
+
+            <p class="section-subtitle">
+                Professional skills
+            </p>
+
+        </div>
+
+
+        <div class="skills">
+
+            <div class="skill">
+                MS Office (Word, Excel, PPt)
+            </div>
+
+            <div class="skill">
+                Creativity
+            </div>
+
+            <div class="skill">
+                Strong Verbal & Written Communication Skill
+            </div>
+
+            <div class="skill">
+                Adaptability & Quick learner
+            </div>
+
+            <div class="skill">
+                Financial Accounting
+            </div>
+
+            <div class="skill">
+                Time Management
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2 class="section-title">
+                Projects & Achievements
+            </h2>
+
+            <p class="section-subtitle">
+                Academic projects and activities
+            </p>
+
+        </div>
+
+
+        <div class="projects">
+
+
+            <div class="project">
+
+                <div class="project-number">
+                    ACHIEVEMENT 01
+                </div>
+
+                <h3>
+                    Student Council
+                </h3>
+
+                <p>
+
+                    Was Part Of Student Council During Highschool
+                    and actively participated in organizing and
+                    supporting various university events, ensuring
+                    smooth operations and excellent attendee
+                    experience.
+
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-number">
+                    ACHIEVEMENT 02
+                </div>
+
+                <h3>
+                    University Forums
+                </h3>
+
+                <p>
+
+                    Currently Part of 2 Forums In University:
+                    Documentation and Crackillusion.
+
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-number">
+                    PROJECT 01
+                </div>
+
+                <h3>
+                    Financial Statement Analysis Project
+                </h3>
+
+                <p>
+
+                    Conducted in-depth analysis of company
+                    financial statements, identifying key trends,
+                    and providing recommendations for improvement.
+
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <div class="project-number">
+                    PROJECT 02
+                </div>
+
+                <h3>
+                    AI Effects on Education and Schooling
+                </h3>
+
+                <p>
+
+                    A project on AI effects on education
+                    and schooling.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EDUCATION
+===================================================== -->
+
+<section id="education">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2 class="section-title">
+                Education
+            </h2>
+
+            <p class="section-subtitle">
+                Academic background
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <h3>
+                    Emirates National School, Sharjah, UAE
+                </h3>
+
+                <div class="date">
+                    High School
+                </div>
+
+                <p>
+                    10th - 2021 - 2022 — 84.6%
+                </p>
+
+                <p>
+                    12th - 2023-2024 — 92%
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>
+                    Jain University, Bangalore, India
+                </h3>
+
+                <div class="date">
+                    2024 - Current
+                </div>
+
+                <p>
+                    Bachelor Risk Management (CIMA)
+                </p>
+
+                <p>
+                    Latest (4th Sem) SGPA: 9
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CERTIFICATIONS
+===================================================== -->
+
+<section id="certifications">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2 class="section-title">
+                Certifications
+            </h2>
+
+            <p class="section-subtitle">
+                Courses and certifications
+            </p>
+
+        </div>
+
+
+        <div class="certifications">
+
+
+            <div class="certificate">
+
+                <h3>
+                    Introduction To Cloud Computing
+                </h3>
+
+                <p>
+                    Coursera · IBM
+                </p>
+
+            </div>
+
+
+            <div class="certificate">
+
+                <h3>
+                    English Composition
+                </h3>
+
+                <p>
+                    Coursera · Duke University
+                </p>
+
+            </div>
+
+
+            <div class="certificate">
+
+                <h3>
+                    Advertising & Society
+                </h3>
+
+                <p>
+                    Coursera · Duke University
+                </p>
+
+            </div>
+
+
+            <div class="certificate">
+
+                <h3>
+                    Mastering Microsoft Office Tools
+                </h3>
+
+                <p>
+                    Coursera · Jain University
+                </p>
+
+            </div>
+
+
+            <div class="certificate">
+
+                <h3>
+                    Understanding Financial Marketing
+                </h3>
+
+                <p>
+                    Coursera · University Of Geneva
+                </p>
+
+            </div>
+
+
+            <div class="certificate">
+
+                <h3>
+                    UX Foundations: Research
+                </h3>
+
+                <p>
+                    LinkedIn
+                </p>
+
+            </div>
+
+
+            <div class="certificate">
+
+                <h3>
+                    Writing: The Craft of Story
+                </h3>
+
+                <p>
+                    LinkedIn
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LANGUAGES
+===================================================== -->
+
+<section id="languages">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2 class="section-title">
+                Languages
+            </h2>
+
+            <p class="section-subtitle">
+                Languages
+            </p>
+
+        </div>
+
+
+        <div class="skills">
+
+            <div class="skill">
+                English
+            </div>
+
+            <div class="skill">
+                Hindi
+            </div>
+
+            <div class="skill">
+                Malayalam
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <h2>
+                Let's Connect
+            </h2>
+
+            <p>
+                Feel free to get in touch through phone or email.
+            </p>
+
+
+            <div class="contact-links">
+
+                <a class="btn btn-primary"
+                   href="mailto:adwaidrakhesh123@gmail.com">
+
+                    Email Me
+
+                </a>
+
+
+                <a class="btn btn-outline"
+                   href="tel:+917676449719">
+
+                    Call
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        © 2026 Adwaid Rakhesh. All rights reserved.
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
